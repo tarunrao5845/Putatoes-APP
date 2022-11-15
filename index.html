@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Putatoe</title>
+
+    <link rel="shortcut icon" href="https://www.putatoe.com/img/logo.png" type="image/x-icon">
+   <style>
+.container{
+
+color: aliceblue;
+  width: 390px;
+position: absolute;
+  left: 50%;
+top: 0px;
+  transform: translate(-50% );
+background:white;
+border-radius: 10px;
+color: black;
+overflow: hidden;
+
+}
+.navbar{
+    background-color:#2095a2;
+   padding:5px ;
+   padding-top: 20px;
+   
+}
+.topnavimg{
+    display: flex;
+   justify-items: flex-start;
+}
+.loc{
+color: #f2f2f2;
+border: 1.5px solid white;
+border-radius:8px;
+font-size:small;
+padding: 3px;
+}
+.navimg{
+    width:25px;
+    height:25px;
+}
+.navimg1{
+    padding-top:2px;
+    width:30px;
+    height:30px;
+}
+.navimgS{
+    width:25px;
+    height:25px;
+}
+
+.right{
+    position: absolute;
+    right:10px;
+}
+.downnavitems{
+display: flex;
+margin:10px;
+justify-content: center;
+}
+#searchmg{
+    position: absolute;
+    left:48px;
+    top:62px;
+}
+input{
+   background-color: white;
+    border: azure;
+    width: 300px;
+    height: 36px;
+    border-radius: 5px;
+    margin-left: 16px;
+}
+
+.carasoul{
+    margin:5px;
+}
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  height:15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+#carasouledots{
+    position:relative;
+    bottom:25px;
+}
+
+.services{
+    margin: 5px;
+}
+.sitems{
+    display: flex;
+   
+}
+.boxes{
+margin: auto;
+    width: 60px;
+    height:60px;
+    overflow: hidden;
+    text-align: center;
+}
+.simg{
+    width: 30px;
+    height: 30px;
+}
+span{
+    text-align: center;
+    color:#348790 ;
+    font-size:10px;
+}
+.psp{
+    width:380px;
+    padding:0.1px;
+    margin:5px;
+    text-align: center;
+    font-size:16px;
+    font-weight: 600;
+    color: #00838f;
+    background-color:#aaf0f6 ;
+}
+
+
+h4{
+    margin-inline: 80px;
+    padding-bottom: 5px;
+color: #a09c9c;
+font-weight:600;
+    text-align: center;
+    border-bottom: 1px solid rgb(6, 5, 5);
+}
+.scrollitems{
+    display: flex;
+    margin: 5px;
+    overflow-x: auto;
+}
+.scrollitems::-webkit-scrollbar{
+    display: none;
+}
+.box{
+    padding-top:16px;
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    margin:10px;
+    width: 80px;
+    height: 100px;
+    justify-content: center;
+}
+.scrollimg{
+margin:1px;
+width:79px;
+height:75px;
+}
+
+.swp{
+margin:5px;
+}
+.r{
+    margin: 5px;
+    display: flex;
+}
+.iboxes{
+    margin: auto;
+    width: 150px;
+    height:120px;
+    overflow: hidden;
+}
+ .offerimg{
+    position:fixed;
+ width: 35px;
+ height: 35px;
+    z-index: 1;
+}
+
+.whole{
+    z-index: -1;
+    width: 150px;
+    height:119px;
+}
+
+#footer{
+    background-color:white;
+  display: flex; 
+  justify-content: center;
+}
+.fimg{
+    text-align: center;
+    margin: 5px;
+    margin-inline:15px;
+}
+.footericon{
+    width: 30px;
+    height: 30px;
+}
+.footericonM{
+    width: 50px;
+    height: 50px;
+}
+   </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="topnavimg">
+                <div class="left">
+                    <img class="navimg" src="./images/location.png" alt="">
+                    <span1 class="loc">247P , Gurugram , Haryana</span1>
+                </div>
+
+                <div class="right">
+                    <img class="navimg" src="./images/bell.png" alt="">
+                    <img class="navimg" src="./images/cart.png" alt="">
+                </div>
+            </div>
+            <div class="downnavitems">
+                <img class="navimgS" id="searchmg" src="./images/icons8-search-64.png" alt="">
+                <input type="search" id="my_field" placeholder="             Search for Products...">
+                <img class="navimg1" src="./images/microphone.png" alt="">
+            </div>
+        </nav>
+
+        <!-- here our navbar ends -->
+
+        <div class="carasoul">
+
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+
+                    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img20/Consumables/Buymoresavemore/PC/700x350_4._CB420502164_.jpg"
+                        style="width:100%">
+
+                </div>
+
+                <div class="mySlides fade">
+
+                    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img20/Consumables/Buymoresavemore/PC/700x350_3._CB420502165_.jpg"
+                        style="width:100%">
+
+                </div>
+
+                <div class="mySlides fade">
+
+                    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img20/Consumables/Buymoresavemore/PC/Lego._CB420511584_.jpg"
+                        style="width:100%">
+
+                </div>
+                <div style="text-align:center" id="carasouledots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- here is our carasoul ends -->
+
+        <div class="services">
+            <div class="sitems">
+                <div class="boxes">
+                    <img class="simg" src="./images/icons8-smartphone-64.png" alt=""> <br>
+                    <span>Recharge</span>
+                </div>
+                <div class="boxes">
+                    <img class="simg" src="./images/icons8-imac-50.png" alt=""> <br>
+                    <span>DTH</span>
+                </div>
+                <div class="boxes">
+                    <img class="simg" src="./images/icons8-loan-64.png" alt=""> <br>
+                    <span>Loans</span>
+                </div>
+                <div class="boxes">
+                    <img class="simg" src="./images/icons8-advertisment-promotion-megaphone-announce-business-marketing-64.png"
+                        alt=""> <br>
+                        <span>Promotions</span>
+                </div>
+            </div>
+            <div class="sitems">
+                <div class="boxes">
+                    <img class="simg" src="./images/icons8-europe-news-50.png" alt=""> <br>
+
+                    <span>News</span>
+
+                </div>
+                <div class="boxes">
+                    <img class="simg" src="./images/icons8-blog-64.png" alt=""> <br>
+                    <span>Blogs</span>
+                </div>
+                <div class="boxes">
+                    <img class="simg" src="./images/icons8-crowd-64.png" alt=""> <br>
+                    <span>Jobs</span>
+                </div>
+                <div class="boxes">
+                    <img class="simg" src="./images/icons8-comments-50.png" alt=""> <br>
+                    <span>Feedback</span>
+                </div>
+            </div>
+            <div class="sitems">
+                <div class="boxes">
+                    <img class="simg" src="./images/icons8-gas-industry-50.png" alt=""> <br>
+                    <span>Gas</span>
+                </div>
+                <div class="boxes">
+                    <img class="simg" src="./images/icons8-light-on-50.png" alt=""> <br>
+                    <span>Electricity</span>
+                </div>
+                <div class="boxes">
+                    <img class="simg" src="./images/icons8-thirst-50.png" alt=""> <br>
+                    <span>Water Bill</span>
+                </div>
+                <div class="boxes">
+                    <img class="simg" src="./images/icons8-forward-button-50.png" alt=""> <br>
+                    <span> More</span>
+                </div>
+            </div>
+
+        </div>
+         <!-- here is our services end -->
+
+<div class="psp">
+    <p>All Popular Service Providers</p>
+</div>
+
+<h4>Daily Needs</h4>
+<div class="scrollitems">
+    <div class="box">
+        <img class="scrollimg" src="https://www.bigbasket.com/media/uploads/p/l/40129623_6-raw-pressery-almond-milk-cacao-lactose-free-dairy-free-vegan.jpg" alt=""> <br>
+
+    </div>
+    <div class="box">
+        <img class="scrollimg" src="https://www.bigbasket.com/media/uploads/p/l/100076754_8-b-natural-juice-litchi-luscious.jpg" alt=""> <br>
+        <span></span>
+    </div>
+    <div class="box">
+        <img class="scrollimg" src="https://www.bigbasket.com/media/uploads/p/l/40117939_4-kapiva-ayurveda-amla-juice.jpg" alt=""> <br>
+        <span></span>
+    </div>
+    <div class="box">
+        <img class="scrollimg" src="https://www.bigbasket.com/media/uploads/p/xxl/30000356-2_4-amul-masti-dahi.jpg" alt=""> <br>
+        <span></span>
+    </div>
+    <div class="box">
+        <img class="scrollimg" src="https://foodexindia.com/m/wp-content/uploads/2021/12/aloo-bhujiafront-new.jpeg" alt=""> <br>
+        <span></span>
+    </div>
+    <div class="box">
+        <img class="scrollimg" src="https://foodexindia.com/m/wp-content/uploads/2021/12/Foodex-Navratan-Mixture.jpg" alt=""> <br>
+        <span></span>
+    </div>
+    <div class="box">
+        <img class="scrollimg" src="https://im.hunt.in/local/Gallery/3080381/s/3080381_607ad.jpg" alt=""> <br>
+        <span></span>
+    </div>
+    <div class="box">
+        <img class="scrollimg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsNLGzS0waD8fxx84Wq23_pgHg7Ro44On9YsRdSkUJKQtl9cX3QBL-DkbpCMkSE_HkTHQ&usqp=CAU" alt=""> <br>
+        <span></span>
+    </div>
+    <div class="box">
+        <img class="scrollimg" src="https://m.media-amazon.com/images/I/81bavU6APQL._AC_UL320_.jpg" alt=""> <br>
+        <span></span>
+    </div>
+    <div class="box">
+        <img class="scrollimg" src="https://m.media-amazon.com/images/I/61ZCNhHpa6L._AC_UL320_.jpg" alt=""> <br>
+        <span></span>
+    </div>
+    <div class="box">
+        <img class="scrollimg" src="https://m.media-amazon.com/images/I/51EElyD50-L._AC_UL320_.jpg" alt=""> <br>
+        <span></span>
+    </div>
+    <div class="box">
+        <img class="scrollimg" src="https://m.media-amazon.com/images/I/81KEKEDFUcL._AC_UL320_.jpg" alt=""> <br>
+        <span></span>
+    </div>
+    <div class="box">
+        <img class="scrollimg" src="https://m.media-amazon.com/images/I/61JnoQ06R7L._AC_UL320_.jpg" alt=""> <br>
+        <span></span>
+    </div>
+    <div class="box">
+        <img class="scrollimg" src="https://m.media-amazon.com/images/I/51tjMeONVoL._AC_UL320_.jpg" alt=""> <br>
+        <span></span>
+    </div>
+    <div class="box">
+        <img class="scrollimg" src="https://m.media-amazon.com/images/I/41H05EXFiqS._AC_UL320_.jpg" alt=""> <br>
+        <span></span>
+    </div>
+</div>
+ <!-- daily needs products ends -->
+
+ <h4>Health</h4>
+    <div class="scrollitems">
+        <div class="box">
+            <img class="scrollimg" src="https://m.media-amazon.com/images/I/41drY5UmyjL._AC_UL320_.jpg" alt=""> <br>
+            <span></span>
+        </div>
+        <div class="box">
+            <img class="scrollimg" src="https://m.media-amazon.com/images/I/511YuiiEV2L._AC_UL320_.jpg" alt=""> <br>
+            <span></span>
+        </div>
+        <div class="box">
+            <img class="scrollimg" src="https://m.media-amazon.com/images/I/716OWCQUUdL._AC_UL320_.jpg" alt=""> <br>
+            <span></span>
+        </div>
+        <div class="box">
+            <img class="scrollimg" src="https://m.media-amazon.com/images/I/51+LKYDW-8L._AC_UL320_.jpg" alt=""> <br>
+            <span></span>
+        </div>
+        <div class="box">
+            <img class="scrollimg" src="https://m.media-amazon.com/images/I/81HHLzHnF0L._AC_UL320_.jpg" alt=""> <br>
+            <span></span>
+        </div>
+        <div class="box">
+            <img class="scrollimg" src="https://m.media-amazon.com/images/I/81gM7ltfyVL._AC_UL320_.jpg" alt=""> <br>
+            <span></span>
+        </div>
+        <div class="box">
+            <img class="scrollimg" src="https://m.media-amazon.com/images/I/71qgKRyD5eS._AC_UL320_.jpg" alt=""> <br>
+            <span></span>
+        </div>
+        <div class="box">
+            <img class="scrollimg" src="https://m.media-amazon.com/images/I/71R+gIIK6UL._AC_UL320_.jpg" alt=""> <br>
+            <span></span>
+        </div>
+        <div class="box">
+            <img class="scrollimg" src="https://m.media-amazon.com/images/I/71Y7srOHoAL._AC_UL320_.jpg" alt=""> <br>
+            <span></span>
+        </div>
+        <div class="box">
+            <img class="scrollimg" src="https://m.media-amazon.com/images/I/71tH6y4K-SL._AC_UL320_.jpg" alt=""> <br>
+            <span></span>
+        </div>
+        <div class="box">
+            <img class="scrollimg" src="https://m.media-amazon.com/images/I/61oFzTbYlWL._AC_UL320_.jpg" alt=""> <br>
+            <span></span>
+        </div>
+        <div class="box">
+            <img class="scrollimg" src="https://m.media-amazon.com/images/I/71Mskrr-uuL._AC_UL320_.jpg" alt=""> <br>
+            <span></span>
+        </div>
+        <div class="box">
+            <img class="scrollimg" src="https://m.media-amazon.com/images/I/41gLbTpigcL._AC_UL320_.jpg" alt=""> <br>
+            <span></span>
+        </div>
+        <div class="box">
+            <img class="scrollimg" src="https://m.media-amazon.com/images/I/51jrjY1OzxL._AC_UL320_.jpg" alt=""> <br>
+            <span></span>
+        </div>
+        <div class="box">
+            <img class="scrollimg" src="https://m.media-amazon.com/images/I/610hBUpniLL._AC_UL320_.jpg" alt=""> <br>
+            <span></span>
+        </div>
+    </div>
+     <!-- here is our health ends -->
+     <h4>Laundry</h4>
+        <div class="scrollitems">
+            <div class="box">
+                <img class="scrollimg" src="https://m.media-amazon.com/images/I/71jTFLOqBWL._AC_UL320_.jpg" alt=""> <br>
+                <span></span>
+            </div>
+            <div class="box">
+                <img class="scrollimg" src="https://m.media-amazon.com/images/I/71LX24shyGL._AC_UL320_.jpg" alt=""> <br>
+                <span></span>
+            </div>
+            <div class="box">
+                <img class="scrollimg" src="https://m.media-amazon.com/images/I/817JISL1FiL._AC_UL320_.jpg" alt=""> <br>
+                <span></span>
+            </div>
+            <div class="box">
+                <img class="scrollimg" src="https://m.media-amazon.com/images/I/61Sd7koV9iL._AC_UL320_.jpg" alt=""> <br>
+                <span></span>
+            </div>
+            <div class="box">
+                <img class="scrollimg" src="https://m.media-amazon.com/images/I/81+hIjz+D-L._AC_UL320_.jpg" alt=""> <br>
+                <span></span>
+            </div>
+            <div class="box">
+                <img class="scrollimg" src="https://m.media-amazon.com/images/I/71K1kiRhAfL._AC_UL320_.jpg" alt=""> <br>
+                <span></span>
+            </div>
+            <div class="box">
+                <img class="scrollimg" src="https://m.media-amazon.com/images/I/61lu0QQ+R-L._AC_UL320_.jpg" alt=""> <br>
+                <span></span>
+            </div>
+            <div class="box">
+                <img class="scrollimg" src="https://m.media-amazon.com/images/I/51CyJ9dUiWL._AC_UL320_.jpg" alt=""> <br>
+                <span></span>
+            </div>
+        </div>
+
+        <!-- here is our laundry ends -->
+        <h4>House Maintenance & Item Repairing</h4>
+            <div class="scrollitems">
+                <div class="box">
+                    <img class="scrollimg" src="https://m.media-amazon.com/images/I/41V4Yb4dYPL._AC_UL320_.jpg" alt=""> <br>
+                    <span></span>
+                </div>
+                <div class="box">
+                    <img class="scrollimg" src="https://m.media-amazon.com/images/I/61hbBalU8xL._AC_UL320_.jpg" alt=""> <br>
+                    <span></span>
+                </div>
+                <div class="box">
+                    <img class="scrollimg" src="https://m.media-amazon.com/images/I/81OsSkekUKL._AC_UL320_.jpg" alt=""> <br>
+                    <span></span>
+                </div>
+                <div class="box">
+                    <img class="scrollimg" src="https://m.media-amazon.com/images/I/51Lt1NUok+L._AC_UL320_.jpg" alt=""> <br>
+                    <span></span>
+                </div>
+                <div class="box">
+                    <img class="scrollimg" src="https://m.media-amazon.com/images/I/61GrMjRq1PL._AC_UL320_.jpg" alt=""> <br>
+                    <span></span>
+                </div>
+                <div class="box">
+                    <img class="scrollimg" src="https://m.media-amazon.com/images/I/51V0mHT-2AL._AC_UL320_.jpg" alt=""> <br>
+                    <span></span>
+                </div>
+                <div class="box">
+                    <img class="scrollimg" src="https://m.media-amazon.com/images/I/41rM8onXL5L._AC_UL320_.jpg" alt=""> <br>
+                    <span></span>
+                </div>
+                <div class="box">
+                    <img class="scrollimg" src="https://m.media-amazon.com/images/I/712pKc2fs5L._AC_UL320_.jpg" alt=""> <br>
+                    <span></span>
+                </div>
+                <div class="box">
+                    <img class="scrollimg" src="https://m.media-amazon.com/images/I/61vNhqUfbeL._AC_UL320_.jpg" alt=""> <br>
+                    <span></span>
+                </div>
+                <div class="box">
+                    <img class="scrollimg" src="https://m.media-amazon.com/images/I/71ZlO5fKmiL._AC_UL320_.jpg" alt=""> <br>
+                    <span></span>
+                </div>
+            </div>
+
+            <!-- here is our home maintenance ends -->
+
+            <h4>Beauty & Hygiene</h4>
+                <div class="scrollitems">
+                    <div class="box">
+                        <img class="scrollimg" src="https://m.media-amazon.com/images/I/71jphrR3DqL._AC_UL320_.jpg" alt=""> <br>
+                        <span></span>
+                    </div>
+                    <div class="box">
+                        <img class="scrollimg" src="https://m.media-amazon.com/images/I/51jor0M0mtL._AC_UL320_.jpg" alt=""> <br>
+                        <span></span>
+                    </div>
+                    <div class="box">
+                        <img class="scrollimg" src="https://m.media-amazon.com/images/I/51oJxyM6DqL._AC_UL320_.jpg" alt=""> <br>
+                        <span></span>
+                    </div>
+                    <div class="box">
+                        <img class="scrollimg" src="https://m.media-amazon.com/images/I/810OiTGtQlL._AC_UL320_.jpg" alt=""> <br>
+                        <span></span>
+                    </div>
+                    <div class="box">
+                        <img class="scrollimg" src="https://m.media-amazon.com/images/I/816JM1axRYL._AC_UL320_.jpg" alt=""> <br>
+                        <span></span>
+                    </div>
+                    <div class="box">
+                        <img class="scrollimg" src="https://m.media-amazon.com/images/I/41gqXg-De3L._AC_UL320_.jpg" alt=""> <br>
+                        <span></span>
+                    </div>
+                    <div class="box">
+                        <img class="scrollimg" src="https://m.media-amazon.com/images/I/41SkhkTwpnL._AC_UL320_.jpg" alt=""> <br>
+                        <span></span>
+                    </div>
+                    <div class="box">
+                        <img class="scrollimg" src="https://m.media-amazon.com/images/I/71+A988k+sL._AC_UL320_.jpg" alt=""> <br>
+                        <span></span>
+                    </div>
+                    <div class="box">
+                        <img class="scrollimg" src="https://m.media-amazon.com/images/I/61hRackor9L._AC_UL320_.jpg" alt=""> <br>
+                        <span></span>
+                    </div>
+                    <div class="box">
+                        <img class="scrollimg" src="https://m.media-amazon.com/images/I/61aE5TiTfVL._AC_UL320_.jpg" alt=""> <br>
+                        <span></span>
+                    </div>
+                    <div class="box">
+                        <img class="scrollimg" src="https://m.media-amazon.com/images/I/71xGO+Vg1yL._AC_UL320_.jpg" alt=""> <br>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="psp" style="margin-bottom:20px;">
+                    <p>Services We Provide</p>
+                </div>
+                <div class="swp">
+                    <div class="r">
+                        <div class="iboxes">
+                           <img class="offerimg" src="https://www.freeiconspng.com/thumbs/20-off-png/circle-20-off-png-1.png" alt=""> 
+                           <img class="whole" src="https://i.ibb.co/gDDtjwV/IMG1617789130224.jpg" alt="">
+                          
+                        </div>
+                        <div class="iboxes">
+                            <img class="offerimg" src="https://www.freeiconspng.com/thumbs/20-off-png/circle-20-off-png-1.png" alt=""> 
+                            <img class="whole" src="https://i.ibb.co/WtrktqZ/1-01-2.png" alt="">
+                            
+                        </div>
+                    </div>
+                    <div class="r">
+                        <div class="iboxes">
+                           <img class="offerimg" src="https://www.freeiconspng.com/thumbs/20-off-png/circle-20-off-png-1.png" alt=""> 
+                           <img class="whole" src="https://i.ibb.co/2v40Cj1/COCONSTRUCTION-1.png" alt="">
+                           
+                        </div>
+                        <div class="iboxes">
+                            <img class="offerimg" src="https://www.freeiconspng.com/thumbs/20-off-png/circle-20-off-png-1.png" alt=""> 
+                            <img class="whole" src="https://i.ibb.co/m8kpXj6/IMG1616930132348.jpg" alt="">
+                            
+                        </div>
+                    </div>
+                    <div class="r">
+                        <div class="iboxes">
+                           <img class="offerimg" src="https://www.freeiconspng.com/thumbs/20-off-png/circle-20-off-png-1.png" alt=""> 
+                           <img class="whole" src="https://i.ibb.co/wNTvK5p/CONSULTANCY-01.png" alt="">
+                           
+                        </div>
+                        <div class="iboxes">
+                            <img class="offerimg" src="https://www.freeiconspng.com/thumbs/20-off-png/circle-20-off-png-1.png" alt=""> 
+                            <img class="whole" src="https://i.ibb.co/1Z61qK3/deliveryman-already-delivers-parcels-young-260nw-1682585317-1.jpg" alt="">
+                            
+                        </div>
+                    </div>
+                    <div class="r">
+                        <div class="iboxes">
+                           <img class="offerimg" src="https://www.freeiconspng.com/thumbs/20-off-png/circle-20-off-png-1.png" alt=""> 
+                           <img class="whole" src="https://i.ibb.co/VLrw3gp/dance-and-music-1.png" alt="">
+                           
+                        </div>
+                        <div class="iboxes">
+                            <img class="offerimg" src="https://www.freeiconspng.com/thumbs/20-off-png/circle-20-off-png-1.png" alt=""> 
+                            <img class="whole" src="https://i.ibb.co/HFXJshq/HEALTH-1.png" alt="">
+                            
+                        </div>
+                    </div>
+                    <div class="r">
+                        <div class="iboxes">
+                           <img class="offerimg" src="https://www.freeiconspng.com/thumbs/20-off-png/circle-20-off-png-1.png" alt=""> 
+                           <img class="whole" src="https://i.ibb.co/C940RpJ/8-EVENT-PLANNER-01.png" alt="">
+                           
+                        </div>
+                        <div class="iboxes">
+                            <img class="offerimg" src="https://www.freeiconspng.com/thumbs/20-off-png/circle-20-off-png-1.png" alt=""> 
+                            <img class="whole" src="https://i.ibb.co/VgpdCX7/17131380.jpg" alt="">
+                            
+                        </div>
+                    </div>
+                    <div class="r">
+                        <div class="iboxes">
+                           <img class="offerimg" src="https://www.freeiconspng.com/thumbs/20-off-png/circle-20-off-png-1.png" alt=""> 
+                           <img class="whole" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ53ROyCvbObueMGmt9Yvm7xfbi1rWV4QKcfg&usqp=CAUzODMtNygtLisBCgoKDg0OGxAQGi0lICYtLS8tLy0tLS0tLS01LS0tLS0tLS8tLS0tLS0tKy0tLS0tLS0tLS8tLS0tLS0tLS0tLf/AABEIALgBEgMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAAAQQFBgcCAwj/xABPEAABAwICBQcGCQgIBgMAAAABAAIDBBESIQUGMUFREyJhcYGRoQcyUpKxwRQjQmJygqLR0hUzU4OTsuHwJENEY3OzwsM0VKPT4vEWFyX/xAAbAQEAAgMBAQAAAAAAAAAAAAAABAUBAgMGB//EAD8RAAEDAQQGCAQDBwQDAAAAAAEAAhEDBBIhMUFRYXGRoQUTIoGxwdHwF" alt="">
+                           
+                        </div>
+                        <div class="iboxes">
+                            <img class="offerimg" src="https://www.freeiconspng.com/thumbs/20-off-png/circle-20-off-png-1.png" alt=""> 
+                            <img class="whole" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM9cO7gOGV2TwE28AslcgU3DOccFzQEos9lM2N5LR33EFEnq-8dtdcu_JMiw0GSSsnifs&usqp=CAU" alt="">
+                            
+                        </div>
+                    </div>
+                    <div class="r">
+                        <div class="iboxes">
+                           <img class="offerimg" src="https://www.freeiconspng.com/thumbs/20-off-png/circle-20-off-png-1.png" alt=""> 
+                           <img class="whole" src="https://i.ibb.co/4fYvQzs/Screenshot-20200530-122059-1.jpg" alt="">
+                           
+                        </div>
+                        <div class="iboxes">
+                            <img class="offerimg" src="https://www.freeiconspng.com/thumbs/20-off-png/circle-20-off-png-1.png" alt=""> 
+                            <img class="whole" src="https://i.ibb.co/98WGwRz/hpuse-hold-01.png" alt="">
+                            
+                        </div>
+                    </div>
+                    <div class="r">
+                        <div class="iboxes">
+                           <img class="offerimg" src="https://www.freeiconspng.com/thumbs/20-off-png/circle-20-off-png-1.png" alt=""> 
+                           <img class="whole" src="https://i.ibb.co/2n7fcmt/Beauty-and-hygiene.png" alt="">
+                           
+                        </div>
+                        <div class="iboxes">
+                            <img class="offerimg" src="https://www.freeiconspng.com/thumbs/20-off-png/circle-20-off-png-1.png" alt=""> 
+                            <img class="whole" src="https://i.ibb.co/3NX44Mv/Whats-App-Image-2021-04-08-at-12-30-26-AM.jpg" alt="">
+                            
+                        </div>
+                    </div>
+                    <div class="r">
+                        <div class="iboxes">
+                           <img class="offerimg" src="https://www.freeiconspng.com/thumbs/20-off-png/circle-20-off-png-1.png" alt=""> 
+                           <img class="whole" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyOUreL7PDWM4qgxtM8GJlTjVho-YVip8PxQ&usqp=CAU" alt="">
+                           
+                        </div>
+                        <div class="iboxes">
+                            <img class="offerimg" src="https://www.freeiconspng.com/thumbs/20-off-png/circle-20-off-png-1.png" alt=""> 
+                            <img class="whole" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7R0vxpH9R__aXV8bY50sutxx1kCpkx1SfBw&usqp=CAU" alt="">
+                            
+                        </div>
+                    </div>
+                    <div class="r">
+                        <div class="iboxes">
+                           <img class="offerimg" src="https://www.freeiconspng.com/thumbs/20-off-png/circle-20-off-png-1.png" alt=""> 
+                           <img class="whole" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFr1Zgx8NsKOOYjgVaPE7OkBhGv7rYFRWrOA&usqp=CAU" alt="">
+                           
+                        </div>
+                        <div class="iboxes">
+                            <img class="offerimg" src="https://www.freeiconspng.com/thumbs/20-off-png/circle-20-off-png-1.png" alt=""> 
+                            <img class="whole" src="https://i.ibb.co/w7YJyyf/IMG1616930132281.jpg" alt="">
+                            
+                        </div>
+                    </div>
+                </div>
+                    <footer id="footer">
+                       <div class="fimg">
+                        <img class="footericon" src="./images/icons8-home-page-48.png" alt=""><br>
+                        <span>Home</span>
+                       </div>
+                       <div class="fimg">
+                        <img class="footericon" src="./images/icons8-administrator-male-24.png" alt=""><br>
+                        <span>Profile</span>
+                       </div>
+                       <div class="fimg">
+                        <img class="footericonM" src="https://www.putatoe.com/img/logo.png" alt="">
+                       </div>
+                       <div class="fimg">
+                        <img class="footericon" src="./images/icons8-note-24.png" alt=""><br>
+                        <span>Follow List</span>
+                       </div>
+                       <div class="fimg">
+                        <img  class="footericon" src="./images/icons8-communication-24.png" alt=""><br>
+                        <span>Chat</span>
+                       </div>
+                    </footer>
+    </div>
+    <script>
+
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 2000);
+        }
+       
+	document.getElementById("my_field").disabled = "true";
+
+    </script>
+
+</body>
+
+</html>
